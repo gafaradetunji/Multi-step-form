@@ -1,0 +1,14 @@
+.main-component{
+    @apply px-4 py-8 mx-auto bg-white relative md:static top-[-60px] rounded-md
+}
+
+.h-text-component{
+    @apply text-2xl mb-2 text-marine-blue font-bold text-[#0000ff]
+}
+.right-button{
+    @apply bg-marine-blue hover:bg-white hover:text-cool-gray font-medium text-white absolute right-0 bottom-[-10rem] rounded-md
+}
+
+.left-button{
+    @apply bg-white hover:bg-marine-blue hover:text-white font-medium text-cool-gray absolute bottom-[-10rem] rounded-md
+}
