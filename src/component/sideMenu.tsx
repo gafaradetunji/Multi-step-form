@@ -19,9 +19,11 @@ const MobileSideMenu: React.FC<SideMenuProps> = ({ active, setActive }) => {
                <CustomList className='h-full'>
                  <li className="text-white h-full flex items-center justify-center md:justify-start md:flex-col">
                     {Tabs.map((num) => (
-                        <div className='md:flex md:w-full md:items-center md:pl-8 md:h-[60px] m-2'>
-                            <CustomButton key={num.id}
-                                onClick={() => handleActive(num.id)} 
+                        <div
+                          key={num.id}
+                          onClick={() => handleActive(num.id)} 
+                          className='md:flex md:w-full md:items-center md:pl-8 md:h-[60px] cursor-pointer m-2'>
+                            <CustomButton  
                                 className={`${ active === num.id ? 'bg-light-blue' : ''}
                                   mb-12 md:mb-0 md:me-4 border-2 px-3 py-[5px] font-bold text-marine-blue rounded-full mx-2`}>
                                 <span>{num.id}</span>

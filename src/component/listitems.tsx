@@ -1,5 +1,5 @@
 /**
- * Renders a list of items
+ * Accepts list of items as children
  * @param {React.ReactNode} children - The list items
  * @param {string} className - The list class name
  * @returns {JSX.Element} - The list of items

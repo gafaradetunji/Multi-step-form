@@ -25,7 +25,7 @@ const PersonalInfo: React.FC<CommonProps> = ({ activeComp, setActiveComp }) => {
         email: '',
         number: '',
     };
-    const handleClick = () => {
+    const handleSubmit = () => {
         if (activeComp === 1) {
             setActiveComp(2);
         }
@@ -35,13 +35,12 @@ const PersonalInfo: React.FC<CommonProps> = ({ activeComp, setActiveComp }) => {
             <main className='main-component w-[90%] h-[400px]'>
                 <h1 className="text-2xl mb-2 text-marine-blue font-bold text-[#0000ff]">Personal Info</h1>
                 <p className='text-[#c3c3c3] mb-3'>Please provide your name, email address, and phone number.</p>
-                <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={() => console.log('submitted')}>
+                <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
                     <Form>
                         <Field component={TextInput} label="Name" name="name" type="text" placeholder='e.g Stephen King' />
                         <Field component={TextInput} label="Email" name="email" type="email" placeholder='e.g stephenking@lorem.com' />
-                        <Field component={TextInput} label="Phone Number" name="number" type="password" placeholder='e.g +1 234 567 890' />
+                        <Field component={TextInput} label="Phone Number" name="number" type="number" placeholder='e.g +1 234 567 890' />
                         <CustomButton type="submit"
-                            onClick={handleClick} 
                           className='bg-marine-blue hover:bg-white hover:text-cool-gray font-medium text-white absolute right-0 md:bottom-[80px] md:right-[250px] bottom-[-10rem] rounded-md'
                           >Next Step</CustomButton>
                     </Form>

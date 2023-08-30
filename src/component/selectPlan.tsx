@@ -41,7 +41,7 @@ const SelectPlan: React.FC<CommonProps> = ({ activeComp, setActiveComp }) => {
         setActive(id === active ? null : id)
     }
     const handleClick = () => {
-        if (activeComp === 2) {
+        if (active !== null && activeComp === 2) {
             setActiveComp(3);
         }
     }
@@ -88,7 +88,7 @@ const SelectPlan: React.FC<CommonProps> = ({ activeComp, setActiveComp }) => {
                         </button>
                         <span className={`pl-2 ${activeToggle === 'Yearly' ? 'text-marine-blue font-bold' : 'text-cool-gray font-medium'}`}>Yearly</span>
                     </div>
-                    <CustomButton className='right-button md:bottom-[80px] md:right-[250px]' onClick={(handleClick)}>Next Step</CustomButton>
+                    <CustomButton className='right-button md:bottom-[80px] md:right-[250px]' onClick={handleClick}>Next Step</CustomButton>
                     <CustomButton type="submit" className='left-button md:bottom-[80px] md:left-[550px]' onClick={() => setActiveComp(1)}>Go Back</CustomButton>
                 </div>
             </main>

@@ -43,7 +43,7 @@ const AddOns: React.FC<CommonProps> = ({ activeComp, setActiveComp }) => {
         }
     };
     const handleClick = () => {
-        if (activeComp === 3) {
+        if (active.length >= 1 && activeComp === 3) {
             setActiveComp(4);
         }
     }
