@@ -11,7 +11,7 @@ const RenderComponents = () => {
     const [ active, setActive ] = useState(1);
     const activeTabInfo = Tabs.find((tab) => tab.id === active);
     return (
-        <main className='bg-white md:px-2 md:py-2 md:h-[600px] md:mx-auto md:w-[900px] h-screen md:flex md:gap-4'>
+        <main className='bg-white md:px-2 md:py-2 md:mt-[100px] md:h-[600px] md:mx-auto md:w-[900px] h-screen md:flex md:gap-4'>
             <MobilesideMenu active={active} setActive={setActive}/>
             <div className='md:flex-initial md:w-[600px]'>
             {activeTabInfo && <activeTabInfo.component activeComp={active} setActiveComp={setActive}/>}
